@@ -1,1 +1,1 @@
-{"root":["./src/app.tsx","./src/main.tsx"],"version":"5.8.3"}
+{"root":["./src/app.tsx","./src/main.tsx","./src/components/base/button.tsx","./src/components/layout/bottombar.tsx","./src/components/layout/topbar.tsx","./src/components/panels/colorconfig.tsx","./src/components/panels/glassslider.tsx","./src/components/panels/typographyconfig.tsx","./src/components/preview/componentpreview.tsx","./src/lib/theme/themecontext.tsx","./src/lib/theme/types.ts","./src/lib/theme/utils.ts"],"version":"5.8.3"}

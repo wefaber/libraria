@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+/* ── Libraria Theme Tokens ── */
+@theme {
+  /* Navy background scale */
+  --color-bg-deep: #0a1628;
+  --color-bg-mid: #0f1d35;
+  --color-bg-elevated: #152238;
+  --color-bg-glass: rgba(15, 29, 53, 0.75);
+
+  /* Text */
+  --color-text-primary: #e8edf5;
+  --color-text-secondary: #8da4c7;
+  --color-text-muted: #5c7299;
+  --color-text-disabled: #3d5070;
+
+  /* Accent */
+  --color-accent: #00c6b0;
+  --color-accent-hover: #0ea5a0;
+
+  /* Borders */
+  --color-border-subtle: rgba(255, 255, 255, 0.06);
+  --color-border-standard: rgba(255, 255, 255, 0.10);
+  --color-border-active: rgba(0, 198, 176, 0.30);
+
+  /* Semantic */
+  --color-error: #ef4444;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+
+  /* Typography */
+  --font-display: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+/* ── Base ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-display);
+  background: var(--color-bg-deep);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* ── Glass surface utilities ── */
+.glass-surface {
+  background: var(--color-bg-glass);
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid var(--color-border-standard);
+}
+
+.glass-surface-elevated {
+  background: rgba(21, 34, 56, 0.85);
+  backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid var(--color-border-standard);
+}
+
+/* ── Dot grid pattern ── */
+.dot-grid {
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.06) 1px,
+    transparent 1px
+  );
+  background-size: 20px 20px;
+}
+
+/* ── Scrollbar styling ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-subtle);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-border-standard);
+}
